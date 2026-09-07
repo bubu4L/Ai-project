@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Burabari James Nennii — Frontend Developer</title>
+  <meta name="description" content="Aspiring frontend developer building accessible, thoughtful web experiences." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --background: #0f1221;
+      --foreground: #f4f4f5;
+      --muted: #a1a1aa;
+      --hero-gold: #d4a853;
+      --hero-gold-dim: #a8833d;
+      --hero-teal: #4ecdc4;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "DM Sans", system-ui, sans-serif;
+      background-color: var(--background);
+      color: var(--foreground);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 4rem 1.5rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .hero {
+      max-width: 80rem;
+      width: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      gap: 4rem;
+      position: relative;
+    }
+
+    .content {
+      text-align: left;
+    }
+
+    .subtitle {
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      color: var(--hero-teal);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(3rem, 8vw, 5rem);
+      font-weight: 600;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--foreground);
+    }
+
+    h1 span {
+      color: var(--hero-gold);
+    }
+
+    .tagline {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      color: var(--muted);
+      margin-top: 1.5rem;
+      max-width: 32rem;
+    }
+
+    .description {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--muted);
+      margin-top: 1.5rem;
+      max-width: 32rem;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2.5rem;
+      padding: 0.875rem 1.75rem;
+      border: 1px solid var(--hero-gold);
+      background: transparent;
+      color: var(--hero-gold);
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .cta:hover {
+      background-color: var(--hero-gold);
+      color: var(--background);
+    }
+
+    .shape {
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .shape svg {
+      width: 100%;
+      max-width: 24rem;
+      height: auto;
+    }
+
+    @media (min-width: 1024px) {
+      .hero {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+      }
+
+      .shape {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="hero">
+    <section class="content">
+      <p class="subtitle">Frontend developer</p>
+      <h1>Burabari James <span>Nennii</span></h1>
+      <p class="tagline">Turning ideas into interfaces.</p>
+      <p class="description">
+        I am an aspiring frontend developer focused on building accessible,
+        thoughtful web experiences. My goal is to write clean code and craft
+        interfaces that feel intuitive, inclusive, and genuinely useful for the
+        people who use them.
+      </p>
+      <a href="/projects" class="cta">View My Projects</a>
+    </section>
+
+    <div class="shape" aria-hidden="true">
+      <svg viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M120 60 L60 60 L60 360 L120 360" stroke="var(--hero-gold)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+        <path d="M300 60 L360 60 L360 360 L300 360" stroke="var(--hero-gold)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+        <path d="M155 110 L115 110 L115 310 L155 310" stroke="var(--hero-teal)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.85" />
+        <path d="M265 110 L305 110 L305 310 L265 310" stroke="var(--hero-teal)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.85" />
+        <line x1="210" y1="90" x2="210" y2="330" stroke="var(--hero-gold-dim)" stroke-width="8" stroke-linecap="round" opacity="0.5" />
+        <circle cx="210" cy="55" r="10" fill="var(--hero-teal)" opacity="0.9" />
+        <circle cx="210" cy="365" r="10" fill="var(--hero-gold)" opacity="0.9" />
+      </svg>
+    </div>
+  </main>
+</body>
+</html>
